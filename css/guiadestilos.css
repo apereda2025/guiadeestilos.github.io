@@ -1,0 +1,103 @@
+
+:root {
+    --color-principal: #95d400;
+    --color-fondo: #fcfcfc;
+    --texto-oscuro: #1b464b;
+    --verde-header: #67a867d3;
+    --transicion: 0.3s ease;
+}
+
+/* Estilos Generales */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--texto-oscuro);
+}
+
+.text-verde-principal { color: var(--color-principal); }
+
+.divisor-seccion {
+    margin: 3rem 0;
+    opacity: 0.1;
+}
+
+/* Cabecera */
+.header-guia {
+    background-color: var(--verde-header);
+    color: white;
+}
+
+/* Tarjetas */
+.card-personalizada {
+    transition: transform var(--transicion), box-shadow var(--transicion);
+    border-radius: 1rem;
+}
+
+.card-personalizada:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05) !important;
+}
+
+.icono-contenedor {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(149, 212, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.icono-contenedor i {
+    font-size: 1.5rem;
+    color: var(--color-principal);
+}
+
+.color-muestra {
+    height: 80px;
+    border-radius: 8px;
+}
+
+
+#evento-shake-suave {
+    animation: shakeSuave 3s infinite; 
+}
+
+@keyframes shakeSuave {
+    0%, 100% { transform: rotate(0deg); }
+    10%, 20% { transform: rotate(1.5deg); }
+    15%, 25% { transform: rotate(-1.5deg); }
+}
+
+#evento-shake-intenso {
+    margin-top: 10px;
+    animation: shakeIntenso 3s infinite;
+}
+
+@keyframes shakeIntenso {
+    0%, 100% { transform: rotate(4deg); }
+    10%, 20% { transform: rotate(8deg); }
+    15%, 25% { transform: rotate(2deg); }
+}
+
+
+header {
+    background-color: #67a867d3;
+    position: sticky;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.555);
+    z-index: 1030;
+}
+.header { 
+    display: flex;
+    color: #1b464b;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+
+}
